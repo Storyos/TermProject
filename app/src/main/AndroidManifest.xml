@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.TermProject">
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="a25949263e22c86dd1f2f63c84c64755"/>
+
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="a25949263e22c86dd1f2f63c84c64755" />
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="e54f838532d91f024be02ce215f59e2a"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
