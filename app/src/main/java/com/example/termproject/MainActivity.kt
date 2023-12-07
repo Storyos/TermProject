@@ -11,6 +11,8 @@ import com.kakao.util.maps.helper.Utility
 import net.daum.mf.map.api.MapView
 import java.lang.Exception
 import java.security.MessageDigest
+import android.content.Intent
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -22,7 +24,15 @@ class MainActivity : AppCompatActivity() {
         val mapView = MapView(this)
         binding.clKakaoMapView.addView(mapView)
 
-
+        setContentView(R.layout.activity_main)
+        val button = findViewById<Button>(R.id.button)
+        button.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
 
     }
+
+
+
 }
