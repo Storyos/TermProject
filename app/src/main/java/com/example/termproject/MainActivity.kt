@@ -1,23 +1,14 @@
 package com.example.termproject
 
-import android.content.ContentValues.TAG
-import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Base64
-import android.util.Log
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.termproject.databinding.ActivityMainBinding
-import com.kakao.util.maps.helper.Utility
 import net.daum.mf.map.api.MapView
-import java.lang.Exception
-import java.security.MessageDigest
 import android.content.Intent
 import android.widget.Button
-import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 
-lateinit var mapViewContainer1 : ConstraintLayout
+// lateinit var mapViewContainer1 : ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -29,14 +20,16 @@ class MainActivity : AppCompatActivity() {
         val mapView = MapView(this)
         binding.clKakaoMapView.addView(mapView)
 
-        //화면전환 버튼
+        val mapPoint = MapPoint.mapPointWithGeoCoord(35.134785, 129.103160) // 부경대 좌표
+        mapView.setMapCenterPoint(mapPoint, true)
+        mapView.setZoomLevel(3, true)
+       /* 화면전환 버튼
         setContentView(R.layout.activity_main)
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
-
         mapViewContainer1 = findViewById(R.id.clKakaoMapView)
         mapViewContainer1.addView(mapView);
 
@@ -59,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         marker1.selectedMarkerType=MapPOIItem.MarkerType.RedPin;
         mapView.addPOIItem(marker1);
-
+*/
     }
 
 }

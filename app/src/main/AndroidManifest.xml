@@ -13,25 +13,16 @@ package="com.example.termproject">
     android:usesCleartextTraffic="true"
     android:theme="@style/Theme.TermProject">
 
-    <meta-data
-        android:name="com.kakao.sdk.AppKey"
-        android:value="a25949263e22c86dd1f2f63c84c64755" />
-    <meta-data
-        android:name="com.kakao.sdk.AppKey"
-        android:value="e54f838532d91f024be02ce215f59e2a" />
+    <meta-data android:name="com.kakao.sdk.AppKey" android:value="a25949263e22c86dd1f2f63c84c64755" />
 
     <activity
         android:name=".MainActivity"
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
-
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-
-    <activity android:name="com.example.termproject.SecondActivity"></activity>
-
 </application>
 
 </manifest>
