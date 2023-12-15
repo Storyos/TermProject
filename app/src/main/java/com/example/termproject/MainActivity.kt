@@ -23,13 +23,13 @@ class MainActivity : AppCompatActivity() {
         val mapPoint = MapPoint.mapPointWithGeoCoord(35.134785, 129.103160) // 부경대 좌표
         mapView.setMapCenterPoint(mapPoint, true)
         mapView.setZoomLevel(3, true)
-       /* 화면전환 버튼
-        setContentView(R.layout.activity_main)
+        //화면전환 버튼
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
+            val intent = Intent(this, Join_Form::class.java)
             startActivity(intent)
         }
+        /*
         mapViewContainer1 = findViewById(R.id.clKakaoMapView)
         mapViewContainer1.addView(mapView);
 
