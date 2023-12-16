@@ -30,7 +30,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttontologin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/clKakaoMapView" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttontojoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="159dp"
@@ -49,7 +49,7 @@
         android:backgroundTint="#CCCCCC"
         android:text="회원가입"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttontologin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

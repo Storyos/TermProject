@@ -36,7 +36,7 @@
         android:layout_marginTop="12dp"
         android:gravity="center"
         android:background="@android:drawable/editbox_background"
-        android:hint="passward"
+        android:hint="password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

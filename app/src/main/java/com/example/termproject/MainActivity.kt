@@ -24,8 +24,13 @@ class MainActivity : AppCompatActivity() {
         mapView.setMapCenterPoint(mapPoint, true)
         mapView.setZoomLevel(3, true)
         //화면전환 버튼
-        val button = findViewById<Button>(R.id.button)
-        button.setOnClickListener {
+        val buttonToLogin_Form = findViewById<Button>(R.id.buttontologin)
+        buttonToLogin_Form.setOnClickListener {
+            val intent = Intent(this, Login_Form::class.java)
+            startActivity(intent)
+        }
+        val buttonToJoin_Form = findViewById<Button>(R.id.buttontojoin)
+        buttonToJoin_Form.setOnClickListener{
             val intent = Intent(this, Join_Form::class.java)
             startActivity(intent)
         }
