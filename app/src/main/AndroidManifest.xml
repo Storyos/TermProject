@@ -23,8 +23,8 @@ package="com.example.termproject">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".Login_Form" android:label="Login 액티비티" />
-    <activity android:name=".Join_Form" android:label="Join 액티비티" />
+    <activity android:name=".LoginForm" android:label="Login 액티비티" />
+    <activity android:name=".JoinForm" android:label="Join 액티비티" />
 </application>
 
 </manifest>

@@ -6,9 +6,9 @@ import com.example.termproject.databinding.ActivityMainBinding
 import net.daum.mf.map.api.MapView
 import android.content.Intent
 import android.widget.Button
+import android.widget.Toast
 import net.daum.mf.map.api.MapPoint
-
-// lateinit var mapViewContainer1 : ConstraintLayout
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -26,13 +26,20 @@ class MainActivity : AppCompatActivity() {
         //화면전환 버튼
         val buttonToLogin_Form = findViewById<Button>(R.id.buttontologin)
         buttonToLogin_Form.setOnClickListener {
-            val intent = Intent(this, Login_Form::class.java)
-            startActivity(intent)
+            try{val intent2 = Intent(this, LoginForm::class.java)
+            startActivity(intent2)
+            finish()
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this, "Login Form 오류", Toast.LENGTH_SHORT).show()
+            }
         }
+
         val buttonToJoin_Form = findViewById<Button>(R.id.buttontojoin)
         buttonToJoin_Form.setOnClickListener{
-            val intent = Intent(this, Join_Form::class.java)
+            val intent = Intent(this, JoinForm::class.java)
             startActivity(intent)
+            finish()
         }
         /*
         mapViewContainer1 = findViewById(R.id.clKakaoMapView)

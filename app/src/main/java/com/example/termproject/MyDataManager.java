@@ -21,10 +21,22 @@ public class MyDataManager {
     public void close() {
         dbHelper.close();
     }
+    public boolean loginUser(String username, String password)
+    {
+        String[] columns = {"username", "password"};
+        String selection = "username = ? AND password = ?";
+        String[] selectionArgs = {username, password};
 
-    public void insertData(String username, String password) {
+        Cursor cursor = database.query("users",columns,selection,selectionArgs,null,null,null);
+
+        boolean loginSuccess = cursor.getCount() > 0;
+        cursor.close();
+        return loginSuccess;
+    }
+    public void insertData(String nickname, String username, String password) {
         ContentValues values = new ContentValues();
-        values.put("username", username);
+        values.put("nickname",nickname);
+        values.put("username",username);
         values.put("password",password);
 
         database.insert("users", null, values);
