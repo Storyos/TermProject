@@ -21,9 +21,9 @@ class JoinForm : AppCompatActivity(){
         setContentView(R.layout.join_form)
 
         Nickname = findViewById(R.id.editTextNickname)
-        Username = findViewById(R.id.editTextUsername)
+        Username = findViewById(R.id.editTextUserName)
         Pwd = findViewById(R.id.editTextPassword)
-        btn_Join = findViewById(R.id.btnSignUp)
+        btn_Join = findViewById(R.id.buttonJoin)
 
         btn_Join.setOnClickListener{
             signUp()
@@ -31,18 +31,18 @@ class JoinForm : AppCompatActivity(){
     }
     private fun signUp() {
         val nickname = Nickname.text.toString()
-        val username = Username.text.toString()
+        val userId = Username.text.toString()
         val password = Pwd.text.toString()
-        if (username.isNotEmpty() && password.isNotEmpty()) {
+        if (userId.isNotEmpty() && password.isNotEmpty()) {
             val dataManager = MyDataManager(this)
             dataManager.open()
 
             val values = ContentValues()
             values.put("nickname",nickname)
-            values.put("username", username)
+            values.put("userId", userId)
             values.put("password", password)
 
-            dataManager.insertData(nickname,username, password)
+            dataManager.insertData(nickname,userId, password)
             dataManager.close()
 
             val intent = Intent(this, MainActivity::class.java)

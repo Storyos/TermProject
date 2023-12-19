@@ -25,6 +25,8 @@ package="com.example.termproject">
     </activity>
     <activity android:name=".LoginForm" android:label="Login 액티비티" />
     <activity android:name=".JoinForm" android:label="Join 액티비티" />
+    <activity android:name=".MapActivity" android:label="Map 액티비티" />
+    <activity android:name=".SettingsActivity" />
 </application>
 
 </manifest>

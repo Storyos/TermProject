@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 알림 설정 스위치 -->
+        <Switch
+            android:id="@+id/switch_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림 활성화"
+            android:paddingBottom="20dp"/>
+
+        <!-- 테마 선택 스피너 -->
+        <Spinner
+            android:id="@+id/spinner_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/theme_options"
+            android:paddingBottom="20dp"/>
+
+        <!-- 언어 선택 스피너 -->
+        <Spinner
+            android:id="@+id/spinner_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/language_options"
+            android:paddingBottom="20dp"/>
+
+        <!-- 정보 및 도움말 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱 정보 및 도움말"
+            android:paddingTop="20dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<!-- res/drawable/button_rounded.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF6200EE"/> <!-- 버튼 배경색 -->
+    <corners android:radius="8dp"/> <!-- 모서리 둥글기 -->
+    <padding
+        android:left="16dp"
+        android:top="16dp"
+        android:right="16dp"
+        android:bottom="16dp"/> <!-- 패딩 -->
+</shape>
